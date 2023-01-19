@@ -14,11 +14,15 @@ export default {
 
 <template>
     <div class="card mx-2" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.description }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+
+        <img v-if="project.image" :src="`${baseUrl}/storage/${project.image}`" class="card-img-top" alt="">
+        <p v-else>No Image</p>
+
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        
     </div>
 </template>
