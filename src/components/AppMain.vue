@@ -21,6 +21,7 @@ export default {
         getProjects() {
             axios.get(`${this.baseUrl}/api/projects`).then(resp=> {
                 this.projects = resp.data.results;
+                //console.log(resp.data.results);
             })
         }
     }
