@@ -48,7 +48,7 @@ export default {
             <!-- pages navigation -->
             <nav class="navigation d-flex justify-content-between">
                     <div>
-                        page {{ currentPage }} in {{ lastPage }}
+                        page {{ currentPage }} di {{ lastPage }}
                     </div>
                     <div>
                         <a class="btn btn-outline-primary me-2" :class="currentPage === 1 ? 'disabled' : ''" href=""

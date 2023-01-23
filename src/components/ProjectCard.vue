@@ -25,7 +25,10 @@ export default {
                 <p class="text-end text-success">{{ project.type ? project.type.title : 'No Type' }}</p>
             </div>
             <p class="card-text">{{ project.description }}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <router-link :to="{name: 'single-project', params: {slug: project.slug}}" href="" class="btn btn-primary">
+                Read more
+            </router-link>
         </div>
         
     </div>
